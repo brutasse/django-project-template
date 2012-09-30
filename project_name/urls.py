@@ -2,9 +2,17 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.http import HttpResponse, HttpResponsePermanentRedirect
 
 from ratelimitbackend import admin
 admin.autodiscover()
+
+robots = lambda _: HttpResponse('User-agent: *\nDisallow:\n',
+                                mimetype='text/plain')
+
+favicon = lambda _: HttpResponsePermanentRedirect(
+    '%score/img/favicon.png' % settings.STATIC_URL
+)
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
@@ -12,6 +20,8 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('ratelimitbackend.views',
     url(r'^login/$', 'login', name='login'),
+    url(r'^robots.txt$', robots),
+    url(r'^favicon.ico$', favicon),
 )
 
 urlpatterns += staticfiles_urlpatterns()
