@@ -4,6 +4,7 @@ from ratelimitbackend import admin
 
 
 # Register stuff that's been added to the standard Django admin
+django_admin.autodiscover()
 for model, modeladmin in django_admin.site._registry.items():
     if not model in admin.site._registry:
         admin.site.register(model, modeladmin.__class__)
