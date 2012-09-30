@@ -8,40 +8,62 @@ This is the template I use for my projects.
 Stack
 -----
 
-* Django
+* `Django`_
 
-* Postgresql
+* `Postgresql`_
 
-* Redis
+* `Redis`_
 
-* Daemontools
+* `Daemontools`_
+
+.. _Django: https://www.djangoproject.com/
+.. _Postgresql: http://www.postgresql.org/
+.. _Redis: http://redis.io/
+.. _Daemontools: http://cr.yp.to/daemontools.html
 
 Features
 --------
 
 * ``setup.py`` for deployment using real packages
 
-* Local development with Foreman
+* Local development with `Foreman`_
 
-* Configuration entirely based on evnironment variables (**no code changes**
+* Configuration entirely based on environment variables (**no code changes**
   when your deploy)
 
-* SCSS/compass with simplified Frameless by @idan for layout management,
+* SCSS/compass with simplified Frameless by `@idan`_ for layout management,
   responsive-ready
 
 * Integrated apps:
 
-  * django-discover-runner
+  * `django-discover-runner`_
 
-  * django-floppyforms
+  * `django-floppyforms`_
 
-  * django-ratelimit-backend
+  * `django-ratelimit-backend`_
 
-  * django-redis-cache
+  * `django-redis-cache`_
 
-  * django-sekizai
+  * `django-sekizai`_
 
-  * raven
+  * `raven`_
+
+  * And for development (in ``requirements-dev.txt``):
+
+    * `django-debug-toolbar`_
+
+    * `flake8`_
+
+.. _Foreman: https://github.com/ddollar/foreman
+.. _@idan: https://github.com/idan
+.. _django-discover-runner: https://github.com/jezdez/django-discover-runner
+.. _django-floppyforms: https://github.com/brutasse/django-floppyforms
+.. _django-ratelimit-backend: https://github.com/brutasse/django-ratelimit-backend
+.. _django-redis-cache: https://github.com/sebleier/django-redis-cache
+.. _django-sekizai: https://github.com/ojii/django-sekizai
+.. _raven: https://github.com/getsentry/raven-python
+.. _django-debug-toolbar: https://github.com/django-debug-toolbar/django-debug-toolbar
+.. _flake8: https://bitbucket.org/tarek/flake8
 
 Usage
 -----
