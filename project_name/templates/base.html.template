@@ -6,13 +6,13 @@
 		<link rel="stylesheet" href="{% templatetag openblock %} static "core/css/screen.css" {% templatetag closeblock %}">
 		<link rel="shortcut icon" href="{% templatetag openblock %} static "core/img/favicon.png" {% templatetag closeblock %}">
 		<meta name="apple-mobile-web-app-title" content="{{ project_name|title }}">
-		<title>{% templatetag openblock %} block title {% templatetag closeblock %}{% templatetag openblock %} trans "Welcome" {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %} &mdash; {{ project_name }}</title>
+		<title>{% templatetag openblock %} block title {% templatetag closeblock %}{% templatetag openblock %} trans "Welcome" {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %} &mdash; {{ project_name|title }}</title>
 		{%templatetag openblock %} render_block "css" {% templatetag closeblock %}
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="head">
-				<h1><a href="{% templatetag openblock %} url "home" {% templatetag closeblock %}">{{ project_name }}</a></h1>
+				<h1><a href="{% templatetag openblock %} url "home" {% templatetag closeblock %}">{{ project_name|title }}</a></h1>
 			</div>
 			<div id="messages">
 				{% templatetag openblock %} for m in messages {% templatetag closeblock %}
