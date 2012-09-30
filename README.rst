@@ -135,7 +135,7 @@ Use ``daemontools``'s ``envdir`` program to manage application secrets
 Use a process watcher such as ``supervisor`` or ``circus`` to run the web
 server. Example::
 
-    /path/to/env/bin/gunicorn {{ project_name }}.wsgi -k gevent -b 127.0.0.1:8000 -w 2
+    envdir /path/to/config /path/to/env/bin/gunicorn {{ project_name }}.wsgi -k gevent -b 127.0.0.1:8000 -w 2
 
 The combination of ``envdir`` and an installable package makes it extremely
 simple to automate your deployments.
