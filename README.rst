@@ -104,7 +104,7 @@ Setting up
     bundle install
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
-    createdb -U postgres project_name
+    createdb -U postgres {{ project_name }}
     make syncdb
     make test
 
