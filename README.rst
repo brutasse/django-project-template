@@ -27,15 +27,16 @@ Stack
 Features
 --------
 
-* ``setup.py`` for deployment using real packages
+* ``setup.py`` for deployment using real packages. Do yourself a favor, don't
+  use VCS for deployments.
 
-* Local development with `Foreman`_
+* Local development with `Foreman`_.
 
 * Configuration entirely based on environment variables (**no code changes**
-  when your deploy)
+  when your deploy).
 
 * SCSS/compass with simplified Frameless by `@idan`_ for layout management,
-  responsive-ready
+  responsive-ready.
 
 * Integrated apps:
 
