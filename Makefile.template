@@ -1,0 +1,17 @@
+proj = {{ project_name }}
+settings = --settings=$(proj).settings
+test_settings = --settings=$(proj).test_settings
+django = envdir env django-admin.py
+
+
+run:
+	foreman start
+
+test:
+	$(django) test $(test_settings) --failfast --noinput
+
+syncdb:
+	$(django) syncdb --noinput $(settings)
+
+user:
+	$(django) createsuperuser $(settings)

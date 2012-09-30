@@ -1,0 +1,9 @@
+Django
+dj-database-url
+django-discover-runner
+django-floppyforms
+django-ratelimit-backend
+django-redis-cache
+django-sekizai
+psycopg2
+raven

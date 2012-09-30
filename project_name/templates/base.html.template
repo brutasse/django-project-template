@@ -1,0 +1,34 @@
+{% templatetag openblock %} load staticfiles sekizai_tags {% templatetag closeblock %}<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="{% templatetag openblock %} static "core/css/screen.css" {% templatetag closeblock %}">
+		<link rel="shortcut icon" href="{% templatetag openblock %} static "core/img/favicon.png" {% templatetag closeblock %}">
+		<meta name="apple-mobile-web-app-title" content="{{ project_name|title }}">
+		<title>{% templatetag openblock %} block title {% templatetag closeblock %}{% templatetag openblock %} trans "Welcome" {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %} &mdash; {{ project_name }}</title>
+		{%templatetag openblock %} render_block "css" {% templatetag closeblock %}
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="head">
+				<h1><a href="{% templatetag openblock %} url "home" {% templatetag closeblock %}">{{ project_name }}</a></h1>
+			</div>
+			<div id="messages">
+				{% templatetag openblock %} for m in messages {% templatetag closeblock %}
+				<p class="{% templatetag openvariable%} m.tags {% templatetag closevariable%}">{% templatetag openvariable%} m|safe {% templatetag closevariable%}</p>
+					{% templatetag openblock %} endfor {% templatetag closeblock %}
+			</div>
+			<div id="content">
+				{% templatetag openblock %} block content {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %}
+			</div>
+			<div id="push"></div>
+		</div>
+		<div id="footer">
+			<div id="footer_inner">
+				<p>This is your friendly footer.</p>
+			</div>
+		</div>
+		{% templatetag openblock %} render_block "js" {% templatetag closeblock %}
+	</body>
+</html>
