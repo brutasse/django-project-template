@@ -125,6 +125,33 @@ Development
   Tests are located in the ``tests/`` directory. Create files at will, the
   test runner will auto-detect tests if the file names begin with ``test``.
 
+Configuration
+-------------
+
+This template uses environment variables for configuration and application
+secrets. The required environment variables are:
+
+* ``SECRET_KEY``: the secret key for Django
+
+* ``DATABASE_URL``: a heroku-like database URL.
+
+Optionally you can use:
+
+* ``DEBUG``: set it to something non-empty to switch to a development
+  environment. Obviously, don't set it in production.
+
+* ``SENTRY_DSN``: your DSN for sending exceptions and 404's to Sentry.
+
+* ``REDIS_URL``: a heroku-like URL to configure redis. If you set it, redis
+  will be used as a cache backend and the message and session storage engines
+  will use it whenever possible.
+
+Environment varibles are managed with ``envdir`` (from ``daemontools``). To
+set an environment variable, add a file to the ``env`` directory with the
+appropriate content. When you run any command in your project, prefix it with
+``envdir env`` to pass it your configuration variables. Look at the
+``Procfile`` and ``Makefile`` to see how it's done.
+
 Deployment
 ----------
 
