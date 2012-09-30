@@ -126,13 +126,16 @@ Deployment
 
 Do **not** use ``foreman`` to deploy apps created this way. Run ``setup.py
 sdist``, export the distribution to your own PyPI server and use ``pip`` to
-install it on your production machines.
+install it on your production machines. Or convert the python distribution to
+a system package if you prefer.
 
-Use ``daemontools``'s ``envdir`` program to manage application secrets.
+Use ``daemontools``'s ``envdir`` program to manage application secrets
+(``SECRET_KEY``, ``DATABASE_URL``, ``SENTRY_DSN``, etc.).
 
-Use a process watcher such as ``supervisor`` to run the web server. Example::
+Use a process watcher such as ``supervisor`` or ``circus`` to run the web
+server. Example::
 
     /path/to/env/bin/gunicorn {{ project_name }}.wsgi -k gevent -b 127.0.0.1:8000 -w 2
 
-The combination of ``envdir`` and a pip-installable package makes it extremely
+The combination of ``envdir`` and an installable package makes it extremely
 simple to automate your deployments.
