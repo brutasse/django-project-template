@@ -16,10 +16,13 @@ Stack
 
 * `Daemontools`_
 
+* `Compass`_
+
 .. _Django: https://www.djangoproject.com/
 .. _Postgresql: http://www.postgresql.org/
 .. _Redis: http://redis.io/
 .. _Daemontools: http://cr.yp.to/daemontools.html
+.. _Compass: http://compass-style.org/
 
 Features
 --------
