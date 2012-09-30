@@ -11,7 +11,7 @@ robots = lambda _: HttpResponse('User-agent: *\nDisallow:\n',
                                 mimetype='text/plain')
 
 favicon = lambda _: HttpResponsePermanentRedirect(
-    '%score/img/favicon.png' % settings.STATIC_URL
+    '{}core/img/favicon.png'.format(settings.STATIC_URL)
 )
 
 urlpatterns = patterns('',
