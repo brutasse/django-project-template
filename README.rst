@@ -102,7 +102,6 @@ Setting up
     add2virtualenv .
     gem install bundle
     bundle install
-    pip install -r requirements.txt
     pip install -r requirements-dev.txt
     createdb -U postgres {{ project_name }}
     make syncdb
