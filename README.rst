@@ -145,11 +145,15 @@ Optionally you can use:
   will be used as a cache backend and the message and session storage engines
   will use it whenever possible.
 
-Environment varibles are managed with ``envdir`` (from ``daemontools``). To
+Environment varibles are defined using the ``env`` directory. To
 set an environment variable, add a file to the ``env`` directory with the
-appropriate content. When you run any command in your project, prefix it with
-``envdir env`` to pass it your configuration variables. Look at the
-``Procfile`` and ``Makefile`` to see how it's done.
+appropriate content. When you run any command in your project, ``manage.py``
+reads the files in ``env`` and exposes them as environment variables.
+
+This replicates the behaviour of `Daemontools`_'s ``envdir`` program, which
+you can use in production to set environment variables properly.
+
+.. _Daemontools: http://cr.yp.to/daemontools.html
 
 Deployment
 ----------

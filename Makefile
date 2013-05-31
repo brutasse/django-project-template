@@ -1,11 +1,10 @@
-django = envdir env django-admin.py
-testdjango = envdir tests/env django-admin.py
+django = python manage.py
 
 run:
 	foreman start
 
 test:
-	$(testdjango) test --failfast --noinput
+	$(django) test --failfast --noinput
 
 syncdb:
 	$(django) syncdb --noinput

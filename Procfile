@@ -1,3 +1,3 @@
-web: envdir env django-admin.py runserver --settings=$PROJ.settings 0.0.0.0:8000
+web: python manage.py runserver 0.0.0.0:8000
 
 compass: compass watch
