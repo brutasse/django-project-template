@@ -1,4 +1,4 @@
-{% csrf_token %}
+{% templatetag openblock %} load i18n {% templatetag closeblock %}{% csrf_token %}
 {% if form.errors and not form.non_field_errors %}
 	<p class="errorlist">{% trans "Please correct the errors below and submit the form again." %}</p>
 {% endif %}
