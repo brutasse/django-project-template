@@ -1,4 +1,4 @@
-{% templatetag openblock %} load staticfiles sekizai_tags {% templatetag closeblock %}<!doctype html>
+{% templatetag openblock %} load staticfiles sekizai_tags i18n {% templatetag closeblock %}<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
