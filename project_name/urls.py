@@ -14,11 +14,13 @@ favicon = lambda _: HttpResponsePermanentRedirect(
     '{0}core/img/favicon.png'.format(settings.STATIC_URL)
 )
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += patterns('ratelimitbackend.views',
+urlpatterns += patterns(
+    'ratelimitbackend.views',
     url(r'^login/$', 'login', name='login'),
     url(r'^robots.txt$', robots),
     url(r'^favicon.ico$', favicon),
