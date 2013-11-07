@@ -79,7 +79,7 @@ To create a project using this template::
     pip install Django
     django-admin.py startproject --template=https://github.com/brutasse/django-project-template/zipball/master --extension=py,rst,template project_name
     cd project_name
-    sh install.sh
+    ./install.sh
 
 Then follow the instructions in the README file.
 
